@@ -4,6 +4,21 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [],
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'demiroto.com',
+          },
+        ],
+        destination: 'https://www.demiroto.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

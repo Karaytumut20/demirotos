@@ -35,7 +35,7 @@ export default function ServiceAreasPage() {
           {/* Districts (with images) */}
           <div className="mb-20">
             <h2 className="text-[32px] lg:text-[40px] font-black text-[#000000] tracking-tighter mb-4">
-              Ana Hizmet Bölgelerimiz
+              Ana Oto Çekici Hizmet Bölgelerimiz
             </h2>
             <p className="text-[#71717a] text-[16px] mb-10 max-w-[600px] leading-relaxed font-medium">
               Aşağıdaki ilçelerde 7/24 oto kurtarma ve çekici hizmetimiz en hızlı şekilde (ortalama 20 dk) mevcuttur.

@@ -34,8 +34,8 @@ export default function Services() {
             id="services-heading"
             className="text-[40px] sm:text-[50px] lg:text-[70px] font-black text-[#000000] leading-[0.95] tracking-tighter mb-6"
           >
-            Yol yardımında <br className="hidden sm:block" />
-            <span className="text-[#a1a1aa]">yeni standart.</span>
+            Oto Çekici ve <br className="hidden sm:block" />
+            <span className="text-[#a1a1aa]">Yol Yardım Hizmetleri.</span>
           </h2>
           <p className="text-[#71717a] text-[18px] lg:text-[20px] font-medium leading-relaxed max-w-[600px]">
             Aracınız arıza yaptığında veya hareket edemediğinde her duruma özel, güvenli ve ultra hızlı çekici filomuz yanınızda.

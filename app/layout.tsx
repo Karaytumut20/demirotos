@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       template: "%s | Demir Oto Kurtarma",
     },
     description:
-      "Çayırova, Şekerpınar, Gebze ve çevresinde 7/24 oto çekici, araç kurtarma ve yol yardım hizmeti. Hızlı, güvenli ve profesyonel destek için hemen arayın: 0546 151 77 41.",
+      "Çayırova, Gebze ve çevresinde 7/24 oto çekici, araç kurtarma ve yol yardım. Hızlı ve güvenli destek için arayın: 0546 151 77 41.",
     keywords: [
       "oto çekici",
       "araç kurtarma",

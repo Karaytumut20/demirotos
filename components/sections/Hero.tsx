@@ -32,9 +32,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="text-[46px] sm:text-[60px] md:text-[80px] lg:text-[85px] xl:text-[100px] font-black text-[#000000] leading-[0.9] tracking-tighter mb-6 lg:mb-10"
           >
-            Hızlı.<br />
-            Güvenilir.<br />
-            <span className="text-[#0A1128]">Kurtarıcı.</span>
+            7/24<br />
+            Oto Çekici &<br />
+            <span className="text-[#0A1128]">Yol Yardım.</span>
           </motion.h1>
 
           <motion.p
