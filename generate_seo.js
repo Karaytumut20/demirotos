@@ -1,4 +1,4 @@
-﻿
+
 const fs = require("fs");
 
 function slugify(text) {
@@ -37,7 +37,8 @@ function generateLocations() {
     { id: "cayirova", name: "Çayırova", type: "ilce" },
     { id: "darica", name: "Darıca", type: "ilce" },
     { id: "dilovasi", name: "Dilovası", type: "ilce" },
-    { id: "tuzla", name: "Tuzla", type: "ilce" }
+    { id: "tuzla", name: "Tuzla", type: "ilce" },
+    { id: "kocaeli", name: "Kocaeli", type: "ilce" }
   ];
 
   const allLocations = [...baseLocations.map(b => ({
@@ -75,7 +76,7 @@ function generateLocations() {
     });
   }
 
-  const output = `export interface Location {\n  id: string;\n  slug: string;\n  name: string;\n  type: "ilce" | "mahalle" | "otoyol" | "sanayi";\n  fallbackImage?: string;\n  h1: string;\n  metaTitle: string;\n  metaDescription: string;\n  intro: string;\n  description: string;\n  nearbyLocations: string[];\n  seoBody?: string;\n}\n\nexport const locations: Location[] = ${JSON.stringify(allLocations, null, 2)};\n\nexport function getLocationBySlug(slug: string): Location | undefined {\n  return locations.find((l) => l.slug === slug);\n}\n\nexport const footerLocations = locations.filter(l => l.type === "ilce");\n`;
+  const output = `export interface Location {\n  id: string;\n  slug: string;\n  name: string;\n  type: "ilce" | "mahalle" | "otoyol" | "sanayi";\n  fallbackImage?: string;\n  h1: string;\n  metaTitle: string;\n  metaDescription: string;\n  intro: string;\n  description: string;\n  nearbyLocations: string[];\n  seoBody?: string;\n  parent?: string;\n}\n\nexport const locations: Location[] = ${JSON.stringify(allLocations, null, 2)};\n\nexport function getLocationBySlug(slug: string): Location | undefined {\n  return locations.find((l) => l.slug === slug);\n}\n\nexport const footerLocations = locations.filter(l => l.type === "ilce");\n`;
   fs.writeFileSync("./data/locations.ts", output, "utf8");
 }
 

@@ -81,6 +81,19 @@ export const locations: Location[] = [
     "seoBody": "<div className=\"space-y-6\"><h3 className=\"text-2xl font-bold mb-4\">Bölgedeki En Hızlı Müdahale</h3><p className=\"mb-4\">Trafiğin yoğun olduğu saatlerde bile, bu bölgeye özel hazır kıta bekleyen araçlarımız sayesinde mağduriyetinizi dakikalar içinde çözüyoruz.</p><h3 className=\"text-2xl font-bold mb-4\">Özel Fiyat Avantajı</h3><p>Yerel bölge operasyonlarımız sayesinde uzun yol maliyetleri olmadan uygun fiyatlı kurtarma hizmetinden faydalanırsınız.</p></div>"
   },
   {
+    "id": "kocaeli",
+    "slug": "kocaeli",
+    "name": "Kocaeli",
+    "type": "ilce",
+    "h1": "Kocaeli Oto Çekici Hizmeti",
+    "metaTitle": "Kocaeli Oto Çekici ve Kurtarma | 7/24 Kesintisiz Hizmet",
+    "metaDescription": "Kocaeli bölgesinde yolda kalan araçlar için en hızlı ve uygun fiyatlı oto kurtarma hizmeti. Hemen arayın!",
+    "intro": "Kocaeli ve çevre mahallelerde 7/24 kesintisiz çekici hizmeti.",
+    "description": "Kocaeli genelinde yaşayabileceğiniz her türlü araç arızası veya trafik kazası sonrasında, bölgenin en hızlı ve güvenilir oto çekici ağı olarak anında müdahale ediyoruz.",
+    "nearbyLocations": [],
+    "seoBody": "<div className=\"space-y-6\"><h3 className=\"text-2xl font-bold mb-4\">Bölgedeki En Hızlı Müdahale</h3><p className=\"mb-4\">Trafiğin yoğun olduğu saatlerde bile, bu bölgeye özel hazır kıta bekleyen araçlarımız sayesinde mağduriyetinizi dakikalar içinde çözüyoruz.</p><h3 className=\"text-2xl font-bold mb-4\">Özel Fiyat Avantajı</h3><p>Yerel bölge operasyonlarımız sayesinde uzun yol maliyetleri olmadan uygun fiyatlı kurtarma hizmetinden faydalanırsınız.</p></div>"
+  },
+  {
     "id": "gebze-merkez",
     "slug": "gebze-merkez",
     "name": "Gebze Merkez",
