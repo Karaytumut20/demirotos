@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-plus-jakarta: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* ─── ULTRA PREMIUM REDESIGN PALETTE ─── */
+  /* Focus: Extreme contrast, stark blacks, brilliant whites, and deep navy touch */
+
+  /* Surfaces */
+  --color-surface-pure: #ffffff;
+  --color-surface-ice: #f8fafc;
+  --color-surface-platinum: #f1f5f9;
+  
+  /* Darks */
+  --color-dark-pure: #000000;
+  --color-dark-charcoal: #09090b; /* Zinc-950 */
+  --color-dark-slate: #18181b; /* Zinc-900 */
+
+  /* Text */
+  --color-text-pure: #000000;
+  --color-text-charcoal: #09090b;
+  --color-text-muted: #71717a; /* Zinc-500 */
+  --color-text-faint: #a1a1aa; /* Zinc-400 */
+
+  /* Borders */
+  --color-border-subtle: rgba(0,0,0,0.05);
+  --color-border-visible: rgba(0,0,0,0.1);
+  --color-border-dark: rgba(255,255,255,0.15);
+
+  /* The Signature Navy Accent */
+  --color-brand-navy: #0A1128; /* Deep rich midnight */
+  --color-brand-blue: #2563EB; /* Vivid touch if needed */
+
+  /* Utility */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #128c7e;
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-plus-jakarta, "Plus Jakarta Sans", system-ui, sans-serif);
+    background-color: var(--color-surface-ice);
+    color: var(--color-text-charcoal);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-surface-pure);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-text-faint);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-muted);
+  }
+
+  ::selection {
+    background: var(--color-dark-pure);
+    color: var(--color-surface-pure);
+  }
+  
+  :focus-visible {
+    outline: 2px solid var(--color-brand-navy);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* Extreme tight letter spacing for massive headings */
+  .tracking-tighter {
+    letter-spacing: -0.04em;
+  }
+  
+  /* Glass effects */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .glass-dark {
+    background: rgba(9, 9, 11, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Ultra refined shadows */
+  .shadow-super-subtle {
+    box-shadow: 0 4px 40px -10px rgba(0, 0, 0, 0.03);
+  }
+  .shadow-bento {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0,0,0,0.02) inset;
+  }
+}
