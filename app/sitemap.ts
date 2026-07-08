@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/yorumlar`, priority: 0.7 },
     { url: `${BASE_URL}/iletisim`, priority: 0.8 },
     { url: `${BASE_URL}/sikca-sorulan-sorular`, priority: 0.7 },
+    { url: `${BASE_URL}/gizlilik`, priority: 0.5 },
+    { url: `${BASE_URL}/kvkk`, priority: 0.5 },
   ].map((p) => ({
     url: p.url,
     lastModified: now,
