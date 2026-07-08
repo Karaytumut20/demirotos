@@ -11,6 +11,7 @@ export interface Location {
   description: string;
   nearbyLocations: string[];
   seoBody?: string;
+  parent?: string;
 }
 
 export const locations: Location[] = [
