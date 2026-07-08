@@ -39,7 +39,7 @@ export default function Reviews() {
             </div>
             <div className="w-px h-12 bg-[#000000]/10" aria-hidden="true" />
             <div className="flex flex-col justify-center">
-              <div className="flex gap-1 mb-1" aria-label="5 yıldız">
+              <div className="flex gap-1 mb-1" role="img" aria-label="5 yıldız üzerinden 5 yıldız">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={16} fill="#09090b" stroke="none" aria-hidden="true" />
                 ))}
@@ -63,7 +63,7 @@ export default function Reviews() {
               className="bg-white rounded-[2rem] p-8 lg:p-10 shadow-super-subtle flex flex-col h-full hover:shadow-bento transition-shadow duration-500"
               aria-label={`${review.name} yorumu`}
             >
-              <div className="flex gap-1 mb-8" aria-label={`${review.rating} yıldız`}>
+              <div className="flex gap-1 mb-8" role="img" aria-label={`5 yıldız üzerinden ${review.rating} yıldız`}>
                 {[...Array(review.rating)].map((_, j) => (
                   <Star key={j} size={16} fill="#09090b" stroke="none" aria-hidden="true" />
                 ))}
