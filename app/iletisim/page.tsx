@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import { Phone, MapPin, Clock } from "lucide-react";
 import PageHeader from "@/components/shared/PageHeader";
 import { business } from "@/data/business";
+import { buildSeoMetadata } from "@/app/seo";
 
-export const metadata: Metadata = {
-  title: "İletişim – Demir Oto Kurtarma | 0546 151 77 41",
+export const metadata: Metadata = buildSeoMetadata({
+  title: "İletişim - Demir Oto Kurtarma | 0546 151 77 41",
   description:
     "Demir Oto Kurtarma iletişim bilgileri. 7/24 oto çekici için hemen arayın: 0546 151 77 41. Çayırova, Şekerpınar, Gebze hizmet bölgesi.",
-  alternates: { canonical: "/iletisim" },
-};
+  path: "/iletisim",
+  image: "/images/demir-logo-black-clean.png",
+});
 
 export default function ContactPage() {
   return (

@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/shared/PageHeader";
 import { business } from "@/data/business";
+import { buildSeoMetadata } from "@/app/seo";
 
-export const metadata: Metadata = {
-  title: "KVKK Aydınlatma Metni – Demir Oto Kurtarma",
+export const metadata: Metadata = buildSeoMetadata({
+  title: "KVKK Aydınlatma Metni - Demir Oto Kurtarma",
   description:
     "Demir Oto Kurtarma KVKK aydınlatma metni. Kişisel verilerin korunması kanunu kapsamında haklarınız ve bilgilendirme.",
-  alternates: { canonical: "/kvkk" },
-};
+  path: "/kvkk",
+});
 
 export default function KvkkPage() {
   return (

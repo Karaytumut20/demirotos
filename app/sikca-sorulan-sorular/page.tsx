@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/shared/PageHeader";
 import FAQSection from "@/components/sections/FAQ";
+import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import { faqs } from "@/data/faqs";
+import { buildSeoMetadata } from "@/app/seo";
 
-export const metadata: Metadata = {
-  title: "Sıkça Sorulan Sorular – Demir Oto Kurtarma",
+export const metadata: Metadata = buildSeoMetadata({
+  title: "Sıkça Sorulan Sorular - Demir Oto Kurtarma",
   description:
     "Oto çekici ve araç kurtarma hakkında sıkça sorulan sorular. Çayırova, Gebze ve Şekerpınar bölgesinde hizmet bilgileri.",
-  alternates: { canonical: "/sikca-sorulan-sorular" },
-};
+  path: "/sikca-sorulan-sorular",
+});
 
 export default function FAQPage() {
   return (
@@ -20,6 +23,7 @@ export default function FAQPage() {
         showCta={false}
       />
       <FAQSection />
+      <SchemaMarkup type="FAQPage" data={faqs} />
     </>
   );
 }

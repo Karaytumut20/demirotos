@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import { Star } from "lucide-react";
 import PageHeader from "@/components/shared/PageHeader";
 import { reviews } from "@/data/reviews";
+import { buildSeoMetadata } from "@/app/seo";
 
-export const metadata: Metadata = {
-  title: "Müşteri Yorumları – Demir Oto Kurtarma",
+export const metadata: Metadata = buildSeoMetadata({
+  title: "Müşteri Yorumları - Demir Oto Kurtarma",
   description:
     "Demir Oto Kurtarma müşteri yorumları. 5,0 Google puanı. Çayırova, Gebze ve Şekerpınar bölgesindeki gerçek müşteri deneyimleri.",
-  alternates: { canonical: "/yorumlar" },
-};
+  path: "/yorumlar",
+  image: "/images/demir-logo-black-clean.png",
+});
 
 export default function ReviewsPage() {
   return (

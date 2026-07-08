@@ -15,9 +15,11 @@ export default function Footer() {
             {/* Custom Designed Tow Truck Logo in Footer */}
             <Link href="/" className="inline-block" aria-label="Ana Sayfa">
               <div className="flex items-center gap-2.5 animate-pulse-subtle">
-                <img
+                <Image
                   src="/images/logo.png"
                   alt="Demir Oto Kurtarma Logo"
+                  width={44}
+                  height={44}
                   className="w-11 h-11 object-contain"
                 />
                 <div className="flex flex-col text-left">

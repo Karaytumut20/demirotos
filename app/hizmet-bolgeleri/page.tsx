@@ -4,15 +4,18 @@ import Image from "next/image";
 import { MapPin, ArrowRight } from "lucide-react";
 import PageHeader from "@/components/shared/PageHeader";
 import { locations } from "@/data/locations";
+import { buildSeoMetadata } from "@/app/seo";
 import fs from "fs";
 import path from "path";
 
-export const metadata: Metadata = {
-  title: "Hizmet Bölgeleri – Çayırova, Gebze ve Çevresi",
+export const metadata: Metadata = buildSeoMetadata({
+  title: "Hizmet Bölgeleri - Çayırova, Gebze ve Çevresi",
   description:
     "Çayırova, Gebze, Darıca, Dilovası ve çevre ilçe ve mahallelerde 7/24 oto çekici ve araç kurtarma hizmeti. Bölgenizi seçin.",
-  alternates: { canonical: "/hizmet-bolgeleri" },
-};
+  path: "/hizmet-bolgeleri",
+  image: "/images/cayirova.png",
+  keywords: ["Çayırova çekici", "Gebze çekici", "Darıca çekici", "Dilovası çekici"],
+});
 
 export default function ServiceAreasPage() {
   const ilceler = locations.filter((l) => l.type === "ilce");

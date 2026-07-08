@@ -31,7 +31,7 @@ export default function About() {
               id="about-short-heading"
               className="text-[32px] lg:text-[48px] font-black text-white leading-tight tracking-tighter mb-8"
             >
-              Gebze ve Çayırova'nın<br/>En Güvenilir Oto Kurtarma Filosu
+              Gebze ve Çayırova&apos;nın<br/>En Güvenilir Oto Kurtarma Filosu
             </h2>
             
             <div className="space-y-6 text-[16px] lg:text-[18px] text-[#a1a1aa] leading-relaxed font-medium max-w-[800px] mx-auto">

@@ -1,9 +1,9 @@
-"use client";
-
 import { business } from "@/data/business";
+import { absoluteUrl, safeJsonLd, siteConfig } from "@/app/seo";
 
 type ServiceSchemaData = {
   title: string;
+  slug?: string;
   locationName?: string;
   description: string;
 };
@@ -19,33 +19,36 @@ interface SchemaMarkupProps {
 }
 
 export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
-  let schemaData = {};
+  let schemaData: Record<string, unknown> | null = null;
 
   if (type === "LocalBusiness") {
     schemaData = {
       "@context": "https://schema.org",
-      "@type": "AutoRepair",
-      "name": business.name,
-      "image": "https://www.demiroto.com/images/demir-logo-black-clean.png",
-      "@id": "https://www.demirotokurtarma.com",
-      "url": "https://www.demirotokurtarma.com",
-      "telephone": business.phone,
-      "priceRange": "₺₺",
-      "address": {
+      "@type": ["LocalBusiness", "AutomotiveBusiness"],
+      "@id": `${siteConfig.url}/#business`,
+      name: business.name,
+      description: business.description,
+      image: absoluteUrl(siteConfig.logo),
+      logo: absoluteUrl(siteConfig.logo),
+      url: siteConfig.url,
+      telephone: business.phoneLink.replace("tel:", ""),
+      priceRange: "₺₺",
+      address: {
         "@type": "PostalAddress",
-        "streetAddress": "Çayırova, Gebze, Şekerpınar Bölgesi",
-        "addressLocality": "Kocaeli",
-        "addressRegion": "TR",
-        "addressCountry": "TR"
+        streetAddress: `${business.address.building}, ${business.address.neighborhood}, ${business.address.street}`,
+        addressLocality: business.address.district,
+        addressRegion: business.address.city,
+        postalCode: business.address.postalCode,
+        addressCountry: "TR",
       },
-      "geo": {
+      geo: {
         "@type": "GeoCoordinates",
-        "latitude": 40.8242,
-        "longitude": 29.3789
+        latitude: 40.7978,
+        longitude: 29.6634,
       },
-      "openingHoursSpecification": {
+      openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
+        dayOfWeek: [
           "Monday",
           "Tuesday",
           "Wednesday",
@@ -54,44 +57,58 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
           "Saturday",
           "Sunday"
         ],
-        "opens": "00:00",
-        "closes": "23:59"
-      }
+        opens: "00:00",
+        closes: "23:59",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: business.rating.toFixed(1),
+        reviewCount: String(business.ratingCount),
+        bestRating: "5",
+        worstRating: "1",
+      },
+      areaServed: business.serviceArea,
     };
   } else if (type === "Service" && data && !Array.isArray(data)) {
     schemaData = {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": data.title,
-      "provider": {
-        "@type": "AutoRepair",
-        "name": business.name
+      "@id": data.slug ? absoluteUrl(`/hizmetler/${data.slug}#service`) : undefined,
+      name: data.title,
+      serviceType: data.title,
+      url: data.slug ? absoluteUrl(`/hizmetler/${data.slug}`) : absoluteUrl("/hizmetler"),
+      provider: {
+        "@id": `${siteConfig.url}/#business`,
+        "@type": ["LocalBusiness", "AutomotiveBusiness"],
+        name: business.name,
       },
-      "areaServed": {
+      areaServed: {
         "@type": "City",
-        "name": data.locationName || "Kocaeli"
+        name: data.locationName || business.serviceArea,
       },
-      "description": data.description
+      description: data.description,
     };
   } else if (type === "FAQPage" && Array.isArray(data)) {
     schemaData = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": data.map((faq) => ({
+      mainEntity: data.map((faq) => ({
         "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
+        name: faq.question,
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
+          text: faq.answer,
+        },
+      })),
     };
   }
+
+  if (!schemaData) return null;
 
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd(schemaData) }}
     />
   );
 }

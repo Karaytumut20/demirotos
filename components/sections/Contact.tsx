@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, MapPin, Clock, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { business } from "@/data/business";
 

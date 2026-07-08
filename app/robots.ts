@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { absoluteUrl, siteConfig } from "@/app/seo";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: [],
     },
-    sitemap: "https://www.demiroto.com/sitemap.xml",
-    host: "https://www.demiroto.com",
+    sitemap: absoluteUrl("/sitemap.xml"),
+    host: siteConfig.url,
   };
 }

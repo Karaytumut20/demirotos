@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Phone, ArrowUpRight, Check, MapPin } from "lucide-react";
+import { Phone, ArrowUpRight, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import PageHeader from "@/components/shared/PageHeader";
@@ -10,6 +10,7 @@ import { locations, getLocationBySlug } from "@/data/locations";
 import { services } from "@/data/services";
 import { business } from "@/data/business";
 import { faqs } from "@/data/faqs";
+import { buildSeoMetadata } from "@/app/seo";
 import fs from "fs";
 import path from "path";
 
@@ -21,15 +22,26 @@ export async function generateStaticParams() {
   return locations.map((l) => ({ slug: l.slug }));
 }
 
+function getLocationImage(location: (typeof locations)[number]) {
+  const specificImagePath = path.join(process.cwd(), "public", "images", `${location.slug}.png`);
+  const hasSpecificImage = fs.existsSync(specificImagePath);
+
+  return hasSpecificImage
+    ? `/images/${location.slug}.png`
+    : `/images/${location.fallbackImage || "gebze"}.png`;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const location = getLocationBySlug(slug);
   if (!location) return {};
-  return {
+  return buildSeoMetadata({
     title: location.metaTitle,
     description: location.metaDescription,
-    alternates: { canonical: `/hizmet-bolgeleri/${slug}` },
-  };
+    path: `/hizmet-bolgeleri/${slug}`,
+    image: getLocationImage(location),
+    keywords: [`${location.name} çekici`, `${location.name} oto kurtarma`, `${location.name} yol yardım`],
+  });
 }
 
 export default async function LocationPage({ params }: Props) {
@@ -43,12 +55,7 @@ export default async function LocationPage({ params }: Props) {
 
   const locationFaqs = faqs.slice(0, 5);
 
-  // Smart Image Fallback logic
-  const specificImagePath = path.join(process.cwd(), "public", "images", `${location.slug}.png`);
-  const hasSpecificImage = fs.existsSync(specificImagePath);
-  const imageSrc = hasSpecificImage 
-    ? `/images/${location.slug}.png` 
-    : `/images/${location.fallbackImage || "gebze"}.png`;
+  const imageSrc = getLocationImage(location);
 
   return (
     <>

@@ -48,9 +48,11 @@ export default function Header() {
             {/* Custom Designed Tow Truck Logo */}
             <Link href="/" className="flex items-center gap-3 group" aria-label="Ana Sayfa">
               <div className="flex items-center gap-2.5">
-                <img
+                <Image
                   src="/images/logo.png"
                   alt="Demir Oto Kurtarma Logo"
+                  width={44}
+                  height={44}
                   className="w-11 h-11 object-contain transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="flex flex-col">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
+import { absoluteUrl, safeJsonLd } from "@/app/seo";
 
 interface BreadcrumbItem {
   label: string;
@@ -20,7 +21,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      ...(item.href ? { item: `https://www.demiroto.com${item.href}` } : {}),
+      ...(item.href ? { item: absoluteUrl(item.href) } : {}),
     })),
   };
 
@@ -28,7 +29,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
     <nav aria-label="Sayfa konumu (breadcrumb)">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <ol className="flex flex-wrap items-center gap-1.5 text-[12.5px] text-slate-500 font-medium">
         {allItems.map((item, i) => (

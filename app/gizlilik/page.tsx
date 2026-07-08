@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/shared/PageHeader";
 import { business } from "@/data/business";
+import { buildSeoMetadata } from "@/app/seo";
 
-export const metadata: Metadata = {
-  title: "Gizlilik Politikası – Demir Oto Kurtarma",
+export const metadata: Metadata = buildSeoMetadata({
+  title: "Gizlilik Politikası - Demir Oto Kurtarma",
   description:
     "Demir Oto Kurtarma gizlilik politikası. Kullanıcı verilerinin nasıl işlendiği, korunduğu ve kullanıldığı hakkında bilgiler.",
-  alternates: { canonical: "/gizlilik" },
-};
+  path: "/gizlilik",
+});
 
 export default function PrivacyPage() {
   return (

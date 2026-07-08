@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Phone, Check } from "lucide-react";
 import PageHeader from "@/components/shared/PageHeader";
 import { business } from "@/data/business";
+import { buildSeoMetadata } from "@/app/seo";
 
-export const metadata: Metadata = {
-  title: "Hakkımızda – Demir Oto Kurtarma",
+export const metadata: Metadata = buildSeoMetadata({
+  title: "Hakkımızda - Demir Oto Kurtarma",
   description:
     "Demir Oto Kurtarma hakkında bilgi. Çayırova, Şekerpınar ve Gebze bölgesinde güvenilir oto çekici ve araç kurtarma hizmeti.",
-  alternates: { canonical: "/hakkimizda" },
-};
+  path: "/hakkimizda",
+  image: "/why-us.png",
+});
 
 const values = [
   "Her araç için güvenli yükleme ve taşıma",
@@ -97,12 +100,12 @@ export default function AboutPage() {
                 bir bölgesine hizmet veriyoruz. Kuzey Marmara Otoyolu
                 güzergahındaki noktalara da ulaşım sağlıyoruz. Hizmet
                 verdiğimiz tüm bölgeleri incelemek için{" "}
-                <a
+                <Link
                   href="/hizmet-bolgeleri"
                   className="text-[#102A43] font-semibold hover:underline"
                 >
                   Hizmet Bölgelerimiz
-                </a>{" "}
+                </Link>{" "}
                 sayfasını ziyaret edebilirsiniz.
               </p>
             </div>

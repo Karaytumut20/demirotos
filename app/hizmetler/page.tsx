@@ -4,15 +4,18 @@ import Image from "next/image";
 import { ArrowRight, Truck, Wrench, Zap, Bike, Package, AlertTriangle } from "lucide-react";
 import PageHeader from "@/components/shared/PageHeader";
 import { services } from "@/data/services";
+import { buildSeoMetadata } from "@/app/seo";
 import fs from "fs";
 import path from "path";
 
-export const metadata: Metadata = {
-  title: "Hizmetlerimiz – Oto Çekici ve Araç Kurtarma",
+export const metadata: Metadata = buildSeoMetadata({
+  title: "Hizmetlerimiz - Oto Çekici ve Araç Kurtarma",
   description:
     "Çayırova, Gebze ve Şekerpınar bölgesinde oto çekici, oto kurtarma, yol yardım, motosiklet çekici ve araç taşıma hizmetleri. 0546 151 77 41",
-  alternates: { canonical: "/hizmetler" },
-};
+  path: "/hizmetler",
+  image: "/images/oto-cekici.png",
+  keywords: ["oto çekici hizmetleri", "araç kurtarma", "yol yardım"],
+});
 
 const iconMap: Record<string, React.ElementType> = {
   Truck,

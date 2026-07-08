@@ -10,15 +10,21 @@ import Reviews from "@/components/sections/Reviews";
 import About from "@/components/sections/About";
 import FAQSection from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
+import { buildSeoMetadata } from "@/app/seo";
 
-export const metadata: Metadata = {
-  title: "Demir Oto Kurtarma – Çayırova, Gebze Çekici ve Yol Yardım | 0546 151 77 41",
+export const metadata: Metadata = buildSeoMetadata({
+  title:
+    "Demir Oto Kurtarma - Çayırova, Gebze Çekici ve Yol Yardım | 0546 151 77 41",
   description:
-    "Çayırova, Şekerpınar, Gebze ve çevresinde 7/24 oto çekici, araç kurtarma ve yol yardım hizmeti. Hızlı, güvenli ve profesyonel. Hemen arayın: 0546 151 77 41",
-  alternates: {
-    canonical: "/",
-  },
-};
+    "Çayırova, Şekerpınar, Gebze ve çevresinde 7/24 oto çekici, araç kurtarma ve yol yardım hizmeti. Hızlı, güvenli ve profesyonel destek için hemen arayın: 0546 151 77 41.",
+  keywords: [
+    "Çayırova çekici",
+    "Gebze çekici",
+    "Şekerpınar çekici",
+    "oto kurtarma",
+    "yol yardım",
+  ],
+});
 
 export default function HomePage() {
   return (

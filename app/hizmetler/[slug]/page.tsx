@@ -9,6 +9,7 @@ import { services, getServiceBySlug } from "@/data/services";
 import { business } from "@/data/business";
 import { faqs } from "@/data/faqs";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import { buildSeoMetadata } from "@/app/seo";
 import fs from "fs";
 import path from "path";
 
@@ -20,15 +21,26 @@ export async function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
 }
 
+function getServiceImage(service: (typeof services)[number]) {
+  const specificImagePath = path.join(process.cwd(), "public", "images", `${service.slug}.png`);
+  const hasSpecificImage = fs.existsSync(specificImagePath);
+
+  return hasSpecificImage
+    ? `/images/${service.slug}.png`
+    : `/images/${service.fallbackImage || "oto-cekici"}.png`;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = getServiceBySlug(slug);
   if (!service) return {};
-  return {
+  return buildSeoMetadata({
     title: service.metaTitle,
     description: service.metaDescription,
-    alternates: { canonical: `/hizmetler/${slug}` },
-  };
+    path: `/hizmetler/${slug}`,
+    image: getServiceImage(service),
+    keywords: [service.title, `${service.title} Çayırova`, `${service.title} Gebze`],
+  });
 }
 
 export default async function ServiceDetailPage({ params }: Props) {
@@ -38,12 +50,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
   const serviceFaqs = service.faqs.length > 0 ? service.faqs : faqs.slice(0, 4);
 
-  // Smart Image Fallback logic
-  const specificImagePath = path.join(process.cwd(), "public", "images", `${service.slug}.png`);
-  const hasSpecificImage = fs.existsSync(specificImagePath);
-  const imageSrc = hasSpecificImage 
-    ? `/images/${service.slug}.png` 
-    : `/images/${service.fallbackImage || "oto-cekici"}.png`;
+  const imageSrc = getServiceImage(service);
 
   return (
     <>
