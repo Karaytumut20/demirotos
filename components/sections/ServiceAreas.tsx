@@ -35,7 +35,7 @@ export default function ServiceAreas() {
               Size Yakın Bölgelerde Hizmet
             </h2>
             <p className="text-slate-500 text-[15px] leading-relaxed mb-6">
-              Çayırova, Gebze, Darıca, Şekerpınar ve çevre ilçelerde 7/24 oto çekici, araç kurtarma ve yol yardım desteği sunuyoruz.
+              Gebze, Çayırova, Darıca, Dilovası, Tuzla, Şekerpınar, Pendik, Körfez, Kocaeli ve çevre ilçelerde 7/24 oto çekici, araç kurtarma ve yol yardım desteği sunuyoruz.
             </p>
             <Link
               href="/hizmet-bolgeleri"

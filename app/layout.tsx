@@ -139,6 +139,8 @@ const jsonLd = {
         "Darıca",
         "Dilovası",
         "Şekerpınar",
+        "Pendik",
+        "Körfez",
         "Kocaeli",
       ],
       serviceType: [

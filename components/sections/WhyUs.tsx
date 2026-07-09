@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const reasons = [
   "Her araç tipine uygun, sıfır hasar garantili yükleme",
   "Net fiyatlandırma politikası, sürpriz maliyet yok",
-  "Çayırova, Gebze ve Şekerpınar'da dakikalar içinde erişim",
+  "Gebze, Çayırova, Tuzla, Darıca ve çevre ilçelerde dakikalar içinde erişim",
   "Kaskolu ve sigortalı taşıma ile tam güvence",
   "Son teknoloji donanımlı araç filosu",
 ];

@@ -21,7 +21,7 @@ function generateLocations() {
     // Darıca
     ...["Darıca Merkez", "Kazım Karabekir", "Osmangazi", "Bağlarbaşı", "Nenehatun", "Fevzi Çakmak", "Sırasöğütler", "Bayramoğlu"].map(n => ({ name: n, type: "mahalle", parent: "Darıca" })),
     // Çayırova
-    ...["Çayırova Merkez", "Şekerpınar", "Özgürlük", "Yenimahalle", "Atatürk", "Akse", "Emek", "İnönü"].map(n => ({ name: n, type: "mahalle", parent: "Çayırova" })),
+    ...["Çayırova Merkez", "Özgürlük", "Yenimahalle", "Atatürk", "Akse", "Emek", "İnönü"].map(n => ({ name: n, type: "mahalle", parent: "Çayırova" })),
     // Dilovası
     ...["Dilovası Merkez", "Mimar Sinan", "Orhangazi", "Diliskelesi", "Tavşancıl", "Cumhuriyet"].map(n => ({ name: n, type: "mahalle", parent: "Dilovası" })),
     // Tuzla
@@ -38,6 +38,9 @@ function generateLocations() {
     { id: "darica", name: "Darıca", type: "ilce" },
     { id: "dilovasi", name: "Dilovası", type: "ilce" },
     { id: "tuzla", name: "Tuzla", type: "ilce" },
+    { id: "sekerpinar", name: "Şekerpınar", type: "ilce" },
+    { id: "pendik", name: "Pendik", type: "ilce" },
+    { id: "korfez", name: "Körfez", type: "ilce" },
     { id: "kocaeli", name: "Kocaeli", type: "ilce" }
   ];
 

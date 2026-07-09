@@ -145,7 +145,7 @@ export default function Footer() {
             © {new Date().getFullYear()} {business.name}. Tüm hakları saklıdır.
           </p>
           <div className="flex items-center gap-1 text-white/40 text-[13px]">
-            <span>Çayırova • Gebze • Şekerpınar • Kocaeli</span>
+            <span>Çayırova • Gebze • Darıca • Dilovası • Tuzla • Şekerpınar • Pendik • Körfez • Kocaeli</span>
           </div>
         </div>
       </div>

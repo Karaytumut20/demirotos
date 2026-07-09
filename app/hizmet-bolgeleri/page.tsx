@@ -9,12 +9,21 @@ import fs from "fs";
 import path from "path";
 
 export const metadata: Metadata = buildSeoMetadata({
-  title: "Hizmet Bölgeleri - Çayırova, Gebze ve Çevresi",
+  title: "Hizmet Bölgeleri - Gebze, Çayırova, Tuzla, Pendik, Körfez ve Çevresi",
   description:
-    "Çayırova, Gebze, Darıca, Dilovası ve çevre ilçe ve mahallelerde 7/24 oto çekici ve araç kurtarma hizmeti. Bölgenizi seçin.",
+    "Gebze, Çayırova, Darıca, Dilovası, Tuzla, Şekerpınar, Pendik, Körfez ve Kocaeli genelinde 7/24 oto çekici ve yol yardım hizmeti. Bölgenizi seçin.",
   path: "/hizmet-bolgeleri",
   image: "/images/cayirova.png",
-  keywords: ["Çayırova çekici", "Gebze çekici", "Darıca çekici", "Dilovası çekici"],
+  keywords: [
+    "Çayırova çekici",
+    "Gebze çekici",
+    "Darıca çekici",
+    "Dilovası çekici",
+    "Şekerpınar çekici",
+    "Tuzla çekici",
+    "Pendik çekici",
+    "Körfez çekici",
+  ],
 });
 
 export default function ServiceAreasPage() {

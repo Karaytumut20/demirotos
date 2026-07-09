@@ -81,6 +81,45 @@ export const locations: Location[] = [
     "seoBody": "<div className=\"space-y-6\"><h3 className=\"text-2xl font-bold mb-4\">Bölgedeki En Hızlı Müdahale</h3><p className=\"mb-4\">Trafiğin yoğun olduğu saatlerde bile, bu bölgeye özel hazır kıta bekleyen araçlarımız sayesinde mağduriyetinizi dakikalar içinde çözüyoruz.</p><h3 className=\"text-2xl font-bold mb-4\">Özel Fiyat Avantajı</h3><p>Yerel bölge operasyonlarımız sayesinde uzun yol maliyetleri olmadan uygun fiyatlı kurtarma hizmetinden faydalanırsınız.</p></div>"
   },
   {
+    "id": "sekerpinar",
+    "slug": "sekerpinar",
+    "name": "Şekerpınar",
+    "type": "ilce",
+    "h1": "Şekerpınar Oto Çekici Hizmeti",
+    "metaTitle": "Şekerpınar Oto Çekici ve Kurtarma | 7/24 Kesintisiz Hizmet",
+    "metaDescription": "Şekerpınar bölgesinde yolda kalan araçlar için en hızlı ve uygun fiyatlı oto kurtarma hizmeti. Hemen arayın!",
+    "intro": "Şekerpınar ve çevre mahallelerde 7/24 kesintisiz çekici hizmeti.",
+    "description": "Şekerpınar genelinde yaşayabileceğiniz her türlü araç arızası veya trafik kazası sonrasında, bölgenin en hızlı ve güvenilir oto çekici ağı olarak anında müdahale ediyoruz.",
+    "nearbyLocations": [],
+    "seoBody": "<div className=\"space-y-6\"><h3 className=\"text-2xl font-bold mb-4\">Bölgedeki En Hızlı Müdahale</h3><p className=\"mb-4\">Trafiğin yoğun olduğu saatlerde bile, bu bölgeye özel hazır kıta bekleyen araçlarımız sayesinde mağduriyetinizi dakikalar içinde çözüyoruz.</p><h3 className=\"text-2xl font-bold mb-4\">Özel Fiyat Avantajı</h3><p>Yerel bölge operasyonlarımız sayesinde uzun yol maliyetleri olmadan uygun fiyatlı kurtarma hizmetinden faydalanırsınız.</p></div>"
+  },
+  {
+    "id": "pendik",
+    "slug": "pendik",
+    "name": "Pendik",
+    "type": "ilce",
+    "h1": "Pendik Oto Çekici Hizmeti",
+    "metaTitle": "Pendik Oto Çekici ve Kurtarma | 7/24 Kesintisiz Hizmet",
+    "metaDescription": "Pendik bölgesinde yolda kalan araçlar için en hızlı ve uygun fiyatlı oto kurtarma hizmeti. Hemen arayın!",
+    "intro": "Pendik ve çevre mahallelerde 7/24 kesintisiz çekici hizmeti.",
+    "description": "Pendik genelinde yaşayabileceğiniz her türlü araç arızası veya trafik kazası sonrasında, bölgenin en hızlı ve güvenilir oto çekici ağı olarak anında müdahale ediyoruz.",
+    "nearbyLocations": [],
+    "seoBody": "<div className=\"space-y-6\"><h3 className=\"text-2xl font-bold mb-4\">Bölgedeki En Hızlı Müdahale</h3><p className=\"mb-4\">Trafiğin yoğun olduğu saatlerde bile, bu bölgeye özel hazır kıta bekleyen araçlarımız sayesinde mağduriyetinizi dakikalar içinde çözüyoruz.</p><h3 className=\"text-2xl font-bold mb-4\">Özel Fiyat Avantajı</h3><p>Yerel bölge operasyonlarımız sayesinde uzun yol maliyetleri olmadan uygun fiyatlı kurtarma hizmetinden faydalanırsınız.</p></div>"
+  },
+  {
+    "id": "korfez",
+    "slug": "korfez",
+    "name": "Körfez",
+    "type": "ilce",
+    "h1": "Körfez Oto Çekici Hizmeti",
+    "metaTitle": "Körfez Oto Çekici ve Kurtarma | 7/24 Kesintisiz Hizmet",
+    "metaDescription": "Körfez bölgesinde yolda kalan araçlar için en hızlı ve uygun fiyatlı oto kurtarma hizmeti. Hemen arayın!",
+    "intro": "Körfez ve çevre mahallelerde 7/24 kesintisiz çekici hizmeti.",
+    "description": "Körfez genelinde yaşayabileceğiniz her türlü araç arızası veya trafik kazası sonrasında, bölgenin en hızlı ve güvenilir oto çekici ağı olarak anında müdahale ediyoruz.",
+    "nearbyLocations": [],
+    "seoBody": "<div className=\"space-y-6\"><h3 className=\"text-2xl font-bold mb-4\">Bölgedeki En Hızlı Müdahale</h3><p className=\"mb-4\">Trafiğin yoğun olduğu saatlerde bile, bu bölgeye özel hazır kıta bekleyen araçlarımız sayesinde mağduriyetinizi dakikalar içinde çözüyoruz.</p><h3 className=\"text-2xl font-bold mb-4\">Özel Fiyat Avantajı</h3><p>Yerel bölge operasyonlarımız sayesinde uzun yol maliyetleri olmadan uygun fiyatlı kurtarma hizmetinden faydalanırsınız.</p></div>"
+  },
+  {
     "id": "kocaeli",
     "slug": "kocaeli",
     "name": "Kocaeli",
@@ -456,20 +495,6 @@ export const locations: Location[] = [
     "description": "Çayırova Merkez çevresinde yolda kaldığınızda strese girmeyin. Uzman ekibimiz bulunduğunuz konuma dakikalar içinde ulaşarak aracınızı güvenle istediğiniz servise taşır.",
     "nearbyLocations": [],
     "seoBody": "<div className=\"space-y-6\"><h3 className=\"text-2xl font-bold mb-4\">Çayırova Merkez Çekici İhtiyacınızda Neden Biz?</h3><p className=\"mb-4\">Özellikle bu bölgede yaşanan araç arızaları yüksek güvenlik riski taşır. Profesyonel filomuz, çağrınızı alır almaz en hızlı güzergahtan size ulaşır.</p><h3 className=\"text-2xl font-bold mb-4\">Uygun Fiyatlı Çekici</h3><p>Sürpriz fiyatlandırmalara son! Çayırova Merkez ve çevresindeki kurtarma işlemlerimizde tamamen şeffaf ve bütçe dostu bir tarife uyguluyoruz.</p></div>"
-  },
-  {
-    "id": "sekerpinar",
-    "slug": "sekerpinar",
-    "name": "Şekerpınar",
-    "type": "mahalle",
-    "fallbackImage": "gebze",
-    "h1": "Şekerpınar Oto Çekici ve Yol Yardım",
-    "metaTitle": "Şekerpınar Çekici | 7/24 Acil Oto Kurtarma",
-    "metaDescription": "Şekerpınar bölgesinde arızalanan veya yolda kalan aracınız için en yakın çekici bir telefon uzağınızda. Hızlı ve güvenilir kurtarma.",
-    "intro": "Şekerpınar (Çayırova) bölgesinde 7/24 kesintisiz oto çekici hizmeti.",
-    "description": "Şekerpınar çevresinde yolda kaldığınızda strese girmeyin. Uzman ekibimiz bulunduğunuz konuma dakikalar içinde ulaşarak aracınızı güvenle istediğiniz servise taşır.",
-    "nearbyLocations": [],
-    "seoBody": "<div className=\"space-y-6\"><h3 className=\"text-2xl font-bold mb-4\">Şekerpınar Çekici İhtiyacınızda Neden Biz?</h3><p className=\"mb-4\">Özellikle bu bölgede yaşanan araç arızaları yüksek güvenlik riski taşır. Profesyonel filomuz, çağrınızı alır almaz en hızlı güzergahtan size ulaşır.</p><h3 className=\"text-2xl font-bold mb-4\">Uygun Fiyatlı Çekici</h3><p>Sürpriz fiyatlandırmalara son! Şekerpınar ve çevresindeki kurtarma işlemlerimizde tamamen şeffaf ve bütçe dostu bir tarife uyguluyoruz.</p></div>"
   },
   {
     "id": "ozgurluk",

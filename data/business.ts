@@ -18,9 +18,9 @@ export const business = {
     postalCode: "41420",
   },
   googleMapsUrl:
-    "https://www.google.com/maps/place/Şekerpınar,+Çayırova,+Kocaeli/@40.7978,29.6634,14z",
+    "https://www.google.com/maps/place/Demir+Oto+Kurtarma/@40.865449,29.374629,17z",
   googleMapsEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12044.123456789!2d29.6634!3d40.7978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb2e0e6c3a5b0d%3A0x0!2zxZ5la2VycMSxbmFyLCDDh2F5xLFyb3ZhLCBLb2NhZWxp!5e0!3m2!1str!2str!4v1720000000000!5m2!1str!2str",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.292760386738!2d29.374629300000002!3d40.865449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad9f2ff1de2dd%3A0x1ce47eda8e67944!2sDemir%20Oto%20Kurtarma!5e0!3m2!1str!2str!4v1783599436489!5m2!1str!2str",
   workingHours: "7/24 Hizmet",
   serviceArea: "Çayırova, Gebze, Şekerpınar ve çevresi",
   rating: 5.0,
